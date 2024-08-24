@@ -6,7 +6,7 @@ import Layout from '../layouts/Layout.astro';
     <script src="../components/oneko.js"></script>
     <main>
         <h1>
-            welcome to my blog!  . ݁₊ ⊹ . ݁˖ . ݁ <!--set blog as a subdirectory so it doesnt clutter up the main page and so i can add friend icons later -->
+            my blog! <!--set blog as a subdirectory so it doesnt clutter up the main page and so i can add friend icons later -->
         </h1>
         <h2>
             <a href="https://moonlitautumn.github.io/webbb/">return to main page</a>
@@ -37,71 +37,3 @@ import Layout from '../layouts/Layout.astro';
         -->
     </main>   
 </Layout>
-
-<style>
-	hr.solid{
-		border: 3px solid var(--accent);
-		border-radius: 2px;
-	}
-	body {
-		color: var(--text);
-		background-color: var(--base);
-		font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
-		text-align: left;
-		width: 70%;
-  		display: flex;
-		justify-content: center;
-		max-width: 1920px;
-		margin: auto;
-	}
-	main {
-		margin: 0;
-		padding: 1rem;
-		font-size: 20px;
-		line-height: 1.6;
-	}
-	h1 {
-		font-size: 4rem;
-		font-weight: 700;
-		line-height: 1;
-		margin-bottom: 1rem;
-	}
-	h2 {
-		font-size: 2.4rem;
-		font-weight: 600;
-	}
-	p {
-		color: var(--subtext1);
-		font-size: 1.6rem;
-		font-weight: 400;
-	}
-	header {
-		margin: 0;
-		padding: 1rem;
-	}
-	a {
-		color: var(--accent);
-		transition: text-decoration-color 1s ease, color 1s ease; <!-- transition color too! -->
-		text-decoration-color: transparent;
-		text-decoration: underline;
-	}
-
-	a:link, a:visited {
-		text-decoration-color: transparent;
-		color: var(--accent);
-	}
-
-	a:hover, a:active {
-		text-decoration-color: var(--accent);
-		color: var(--subtext1)
-	}
-	img.friends-img {
-		height: 31px;
-		width: 88px;
-	}
-	div.friends {
-		display: flex;
-		flex-wrap: wrap;
-		gap: 1.25rem;
-	}
-</style>

@@ -69,4 +69,73 @@ const { title } = Astro.props;
 			Courier New,
 			monospace;
 	}
+
+
+
+	hr.solid{
+		border: 3px solid var(--accent);
+		border-radius: 2px;
+	}
+	body {
+		color: var(--text);
+		background-color: var(--base);
+		font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+		text-align: left;
+		width: 70%;
+  		display: flex;
+		justify-content: center;
+		max-width: 1920px;
+		margin: auto;
+	}
+	main {
+		margin: 0;
+		padding: 1rem;
+		font-size: 20px;
+		line-height: 1.6;
+	}
+	h1 {
+		font-size: 4rem;
+		font-weight: 700;
+		line-height: 1;
+		margin-bottom: 1rem;
+	}
+	h2 {
+		font-size: 2.4rem;
+		font-weight: 600;
+	}
+	p {
+		color: var(--subtext1);
+		font-size: 1.6rem;
+		font-weight: 400;
+	}
+	header {
+		margin: 0;
+		padding: 1rem;
+	}
+	a {
+		color: var(--accent);
+		transition: text-decoration-color 1s ease, color 1s ease; <!-- transition color too! -->
+		text-decoration-color: transparent;
+		text-decoration: underline;
+	}
+
+	a:link, a:visited {
+		text-decoration-color: transparent;
+		color: var(--accent);
+	}
+
+	a:hover, a:active {
+		text-decoration-color: var(--subtext1);
+		color: var(--subtext1)
+	}
+	img.friends-img {
+		height: 31px;
+		width: 88px;
+	}
+	div.friends {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 1.25rem;
+	}
+	
 </style>
