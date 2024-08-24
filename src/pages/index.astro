@@ -124,15 +124,19 @@ import Card from '../components/Card.astro';
 	}
 	a {
 		color: var(--accent);
-		transition: text-decoration 1.5s ease;
+		transition: text-decoration-color 1s ease, color 1s ease; <!-- transition color too! -->
+		text-decoration-color: transparent;
+		text-decoration: underline;
 	}
 
 	a:link, a:visited {
-		text-decoration: none;
+		text-decoration-color: transparent;
+		color: var(--accent);
 	}
 
 	a:hover, a:active {
-		text-decoration: underline;
+		text-decoration-color: var(--accent);
+		color: var(--subtext1)
 	}
 </style>
 
