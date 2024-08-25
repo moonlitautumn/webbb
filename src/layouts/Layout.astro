@@ -79,8 +79,9 @@ const { title } = Astro.props;
 	body {
 		color: var(--text);
 		background-color: var(--base);
-		font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+		font-family: Strawberry, Inter, Avenir, Helvetica, Arial, sans-serif;
 		text-align: left;
+		image-rendering: crisp-edges;
 
 	}
 	main {
@@ -134,6 +135,7 @@ const { title } = Astro.props;
 	img.friends-img {
 		height: 31px;
 		width: 88px;
+		image-rendering: pixelated;
 	}
 	div.friends {
 		display: flex;
@@ -153,7 +155,7 @@ const { title } = Astro.props;
 		padding: 1rem;
 
 		color: var(--text);
-		font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+		font-family: Strawberry, Inter, Avenir, Helvetica, Arial, sans-serif;
 	}
 	
 </style>
