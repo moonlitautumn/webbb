@@ -214,17 +214,11 @@ import Card from '../components/Card.astro';
 		<p style="font-size: 0.5rem; colour: var(--overlay1);">
 			<a href="https://moonlitautumn.github.io/webbb/youarevalid">pssst click here for validation!</a>
 		</p>
-		
-		<script>
-			var mew = new Audio('https://raw.githubusercontent.com/moonlitautumn/webbb/master/public/SE_Cat_Meow.ogg');
-     		function mewow() {
-            	mew.play();
-     		}
-		</script>
 
-		<a onclick="mewow()" class="mewo">
+		<audio id="meow" src="https://raw.githubusercontent.com/moonlitautumn/webbb/master/public/SE_Cat_Meow.ogg"></audio>
+		<a onclick="document.getElementById('meow').play();">
 			<img src="https://raw.githubusercontent.com/moonlitautumn/webbb/master/public/MEWO.png">
-		</a>
+	    </a>
 	</main>
 
 	<footer>
