@@ -23,7 +23,15 @@ import Card from '../components/Card.astro';
             <p>
 				<a href="https://moonlitautumn.github.io/webbb/blog/">My Blog/Articles 🤍🤍</a> <br>
 				<a href="https://moonlitautumn.github.io/webbb/weeklyvideo">Video of the week!</a><br>
-				<a href="https://mood.zptr.cc/moonlitivy">Current mood</a><br>
+				
+				<a href="https://mood.zptr.cc/moonlitivy">
+					Current mood
+				</a> 
+				<a href="https://www.imood.com/query.cgi?email=sillyivyluna@gmail.com">
+					<img src="https://moods.imood.com/display/email-sillyivyluna@gmail.com/imood.gif" alt="The current mood of sillyivyluna@gmail.com at www.imood.com">
+				</a>
+				<br>
+				<a href="https://sillyivyluna.atabook.org/">. ݁₊ ⊹ . ݁˖ . ݁ guest book!</a><br>
 				<a href="https://www.youtube.com/watch?v=07OTCXiKEsw">Fav song/playlist! (last changed 6/12)</a><br>
 			</p>	
 			<div>
@@ -49,8 +57,50 @@ import Card from '../components/Card.astro';
 			<source src="https://raw.githubusercontent.com/moonlitautumn/webbb/master/public/quiet-time.mp3" type="audio/mpeg">
 			Your browser does not support the audio element. :(
 		</audio> 
+
+
+
+		<div class="header__inner">
+			<p>
+				latest played song on 
+				<a href="http://last.fm" target="_blank">last.fm:
+				</a>
+				
+					<!--
+						powered by https://github.com/biancarosa/lastfm-last-played
+						@biancarosa (THANK YOU SO SO MUCH FOR MAKING THIS)
+					-->
+			</p>
+			<p><img src="#" id="songcover"> &gt;&gt; 
+				<a href="#" id="dynamlink">
+					<span id="song">
+						loadinggg...
+					</span>
+				</a>		
+			</p>
+			
+		</div>
+
+		<script type="text/javascript">
+			let user = 'sillygirlivy';
+			let url = 'https://lastfm-last-played.biancarosa.com.br/' + user + '/latest-song';
+			let song = document.querySelector('#song');
+			const dynamlink = document.getElementById('dynamlink');
+			const songcover = document.getElementById('songcover');
+
+			fetch(url)
+				.then(function (response) {
+					return response.json()
+				}).then(function (json) {
+					songcover.src = json['track']['image']['0']['#text'];
+					dynamlink.href = json['track']['url'];
+					song.innerHTML = json['track']['name'] + ' - ' + json['track']['artist']['#text'];
+				});
+		</script>
+
 		
-		<h2>Some facts about me!</h2>
+
+		<h2>about meeeeeeeee</h2>
 		<h3>
 			my name is 
 			<span style="color: var(--accent)">
@@ -58,17 +108,17 @@ import Card from '../components/Card.astro';
 			</span> 
 
 			<span style="color: var(--overlay1); font-size: 1.6rem; font-weight: 400;">
-				aka: Autumn, Luna or by my online usr moonlitautumn
+				aka: Luna!
 			</span> <br>
 
-			Pronouns: <span style="color: var(--accent)">she/her</span>
-			<a href="https://en.pronouns.page/@autumnivyluna">(pronouns.page)</a> <br>
+			<span style="color: var(--accent)">she/her</span>
+			<a href="https://en.pronouns.page/@autumnivyluna"></a> <br>
 
-			Mbti: inxp-t! 
+			inxp-t! 
 			<span style="color: var(--overlay1); font-size: 1.6rem; font-weight: 400;">
 				idk if im infp or intp soooooo
 			</span> <br>
-			Nationality: Brazilian ✨🌒 <br>
+			Brazilian + Briish ✨🌒 <br>
 
 			MAJOR YONKAGOR FAN 
 			<span style="color: var(--overlay1); font-size: 1.6rem; font-weight: 400;">
@@ -80,90 +130,55 @@ import Card from '../components/Card.astro';
 				</a>		
 			</span>
 		</h3>
-		<ul style="list-style-t">
-			<li>
+		<div class="border">
+
+			<h2>whoaaa who is this fella???</h2>
+			<p>
 				I'm a 17 year old <span style="color: var(--overlay1)">(probably audhd-tistic)</span> 
 				girl thats LOVES spending time on her pc
-			</li>
-			<li>
-				<p>
-					I love programming, pentesting and computers in general, like I will literally spend 
-					my whole day in front of my computer just developing and working on random stuff I 
-					think is Cool!
-				</p>
-				<p>
-					<span style="color: var(--overlay1)">
-						Some of my fav programming languages are python, html/css, c#, java and 
-						some js, though I'm still learning it.
-					</span>
-				</p>
-						
-			</li>
-			<li>
-				<span> 
-					if you want to check out some of my recent projects 
-					<a href="https://github.com/moonlitautumn/">here is my github! </a>
-					
+
+			</p>
+			<p>
+				programming, pentesting, computers in general, like I will literally spend 
+				my whole day in front of my computer just developing and working on random stuff I 
+				think is Cool!
+			</p>
+			<p>
+				<span style="color: var(--overlay1)">
+					i like python, html/css, c#, java, bash, js and LINUX I HECKING LOVE LINUX
 				</span>
-			</li>
-			<li>
-				<p>
-					I love watching anime and playing rpg games with deep and emotional stories
-				</p>
-				<p>
-					<span style="color: var(--overlay1)">
-						some of my favourites are omori, undertale, oneshot, nso, the promised 
-						neverland and 86!
-					</span>
-					
-				</p>
-			</li>
-			<li>
-				<p>
-					i also love sandbox and war strategy games
-				</p>
-				<p>
-					<span style="color: var(--overlay1)">
-						my favs are minecraft, stardew valley, stellaris, hoi4 and chess! here is my <a href="https://namemc.com/profile/moonlitivy">namemc account</a>
-					</span>
-				</p>		 
-			</li>	
-			<li>
-				if you want to see what anime im watching or have watched feel free to check 
-				out my <a href="https://anilist.co/user/moonlitivy/">anilist!</a> 
-			</li>
-			<li>
-				im learning both japanese and russian! im okay ish at german and am fluent in both english and portuguese 🌸🌸
-			</li>
-			<li>
-				i also once made my own conlang with its own base 20 number system and am currently 
-				writing a story with my ocs ^^
-			</li>
-			<li>
-				My dms are always open! feel free to text me whenever, my discord is 
+			</p>	
+			<p>
+				<a href="https://github.com/moonlitautumn/">my github thingy </a>
+			</p>
+			<p>
+				I love watching anime and playing rpgs like omori, undertale, nso, oneshot, deltarune + some sanbox chill games like <a href="https://namemc.com/profile/moonlitivy">minecraft</a>, stardew, fields of mistria, webfishing
+			</p>	
+			<p>
+				my <a href="https://anilist.co/user/moonlitivy/">anilist!</a> 
+			</p>	
+			<p>
+				im learning japanese and russian! im okayish(i think?) at german and speak english and portuguese 🌸🌸
+			</p>
+			<p>
+				feel free to text me whenever at  
 				<a href="https://discordapp.com/users/720004294748799106" target="_blank">moonlitautumn_ </a>
-				dont be a weirdo or an emotional leach if i dont know you though!
-			
-			</li>
-			<li>
-				Official windows, capitalism and apple hater
-			</li>
-			<li>
-				currently learning witchcraft!
-			</li>
-			<li>
-				<a style="text-decoration: none;" href="https://files.catbox.moe/fiilyc.gif">
-					<span style="color: var(--accent);">Actively practicing nicoleism!</span>
-				</a>
-			</li>
-			<li style="margin-bottom: 0rem;">
-				i'm currently ricing my pc but it isnt ready yet so no dotfiles for now! <br>
+				dont be a weirdo or an emotional leach if i dont know you though (plssssssss)
+			</p>
+			<p>
+				Official windows, capitalism and apple hater (honestly why do ppl even buy apple stuffs)
+			</p>			
+			<p>
+				learning witchcraft &gt;:3
+			</p>
+			<p>
+				i'm ricing my pc but no dotfiles for now! <br>
 				<a href="https://files.catbox.moe/kbtzf9.png" target="_blank">
-					<span style="color: var(--accent);">i use Arch btw. :3 </span>
+					<span style="color: var(--accent);">i use Arch btw :33 </span>
 				</a>
-				
-			</li>			
-		</ul>
+			</p>
+
+		</div>		
 		<h3>
 			Me &lt;&lt;&lt; <span style="color: var(--accent)">✨gay asf✨</span> 🩷💜💙 🩷🤍🩷 (chronically confused about sexuality -w-')	
 		</h3>
@@ -193,17 +208,27 @@ import Card from '../components/Card.astro';
 				programming and computers (expecially if it runs linux!)  <br>
 			</li>
 			<li>
-				CATS AND RED PANDAS. <br>
+				CATS AND RED PANDASSSAGSHJDGKAJFSDG<br>
 			</li>
 		</ul>
 		<p style="font-size: 0.5rem; colour: var(--overlay1);">
 			<a href="https://moonlitautumn.github.io/webbb/youarevalid">pssst click here for validation!</a>
 		</p>
+
+		<a onclick="mewo()" class="mewo">
+			<img src="https://raw.githubusercontent.com/moonlitautumn/webbb/master/public/MEWO.png">
+		</a>
+		<script>
+			var mew = new Audio('https://raw.githubusercontent.com/moonlitautumn/webbb/master/public/SE_CAT_Meow.ogg');
+     		function mewo() {
+            		mew.play();
+     		}
+		</script>
 	</main>
 
 	<footer>
 		<p class="feet">
-			Cool stuffs! (and people)
+			Cool stuff!
 		</p>
 		<div class="friends">
 			<a href="https://moonlitautumn.github.io/webbb/" title="it links to this website, silly!">
